@@ -165,78 +165,94 @@
            MOBILE RESPONSIVE STYLES (Screens under 768px)
            ======================================================= */
         @media screen and (max-width: 768px) {
-            body {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: center;
-                padding: 20px 15px 40px 15px;
+            html, body {
                 height: auto;
                 min-height: 100vh;
+                overflow-x: hidden;
                 overflow-y: auto;
             }
 
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 15px 40px 15px;
+            }
+
+            /* Disable absolute positioning on mobile so elements stack cleanly */
             .center-container, .top-left-corner, .top-right-corner, .left-content, .right-buttons, .affiliate-footer {
                 position: static;
                 transform: none;
                 width: 100%;
                 max-width: 100%;
-                margin-bottom: 20px;
+                margin: 0 0 20px 0;
             }
 
             .center-container {
-                margin-top: 10px;
-                margin-bottom: 15px;
+                order: 1;
+                margin-top: 5px;
+                margin-bottom: 20px;
             }
 
             .logo {
-                width: 130px;
+                width: 120px;
             }
 
             .title {
-                font-size: 22px;
+                font-size: 20px;
                 letter-spacing: 1px;
             }
 
-            .top-left-corner, .top-right-corner {
-                display: none;
-            }
-
+            /* Mobile message card */
             .left-content {
-                background: rgba(0, 0, 0, 0.7);
-                padding: 20px;
+                order: 2;
+                background: rgba(0, 0, 0, 0.75);
+                padding: 18px;
                 border-radius: 10px;
                 text-align: center;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.4);
             }
 
             .left-message {
-                font-size: 16px;
+                font-size: 15px;
                 margin-bottom: 12px;
                 text-shadow: none;
             }
 
+            /* Action Buttons Stacked */
             .right-buttons {
+                order: 3;
                 display: flex;
                 flex-direction: column;
                 gap: 12px;
+                width: 100%;
             }
 
             .btn {
                 width: 100%;
-                padding: 14px;
-                font-size: 16px;
+                padding: 12px;
+                font-size: 15px;
             }
 
+            /* Include top corner boxes in mobile flow as part of the footer grid */
+            .top-left-corner, .top-right-corner {
+                display: flex;
+            }
+
+            /* Affiliate Grid Container for Mobile */
             .affiliate-footer {
+                order: 4;
+                display: flex;
                 flex-wrap: wrap;
                 gap: 10px;
                 justify-content: center;
-                margin-top: 5px;
+                margin-top: 10px;
             }
 
-            .affiliate-box {
-                width: 48%;
-                height: 140px;
+            /* Make boxes fit nicely side-by-side on phones (2 per row) */
+            .affiliate-box, .top-left-corner, .top-right-corner {
+                width: 47% !important;
+                height: 150px !important;
             }
         }
     </style>
