@@ -24,7 +24,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Logo Box in Upper Left Corner */
+/* Logo Box stays in the Upper Left Corner */
 .sky-center-header {
     position: fixed;
     top: 25px;
@@ -49,20 +49,21 @@ body {
     border-radius: 6px;
 }
 
-/* "Travel With Abby B" brought back and placed right below the upper-left logo box */
+/* "Travel With Abby B" positioned right in the middle of the screen above the ship */
 .sky-title {
     position: fixed;
-    top: 175px;
-    left: 30px;
-    font-size: 1.3rem;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.2rem;
     font-weight: 800;
     color: #ffffff;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95);
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.95);
     white-space: nowrap;
     z-index: 25;
 }
 
-/* Left-Side Content Box (Pushed down a bit more so it clears the title) */
+/* Left-Side Content Box */
 .container {
     width: 100%;
     max-width: 420px;
@@ -73,7 +74,6 @@ body {
     padding: 30px;
     z-index: 10;
     margin-right: auto;
-    margin-top: 150px; /* Pushes content down to accommodate the upper-left title */
     position: absolute;
     left: 0;
 }
