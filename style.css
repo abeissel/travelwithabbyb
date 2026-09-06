@@ -55,14 +55,16 @@ body {
     color: #000000;
 }
 
-/* White Content Box: Touching the exact left edge of the screen */
+/* Transparent Content Box: Touching the exact left edge of the screen */
 .container {
     width: 100%;
     max-width: 400px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.95);
+    /* Changed from solid white to transparent (rgba with 0.3 opacity). Change 0.3 to make it more or less see-through! */
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(6px); /* Optional: Adds a cool frosted-glass blur effect behind it */
     padding: 30px;
-    border-radius: 0 12px 12px 0; /* Rounded on the right side, flush on the left */
+    border-radius: 0 12px 12px 0;
     box-shadow: 4px 8px 24px rgba(0, 0, 0, 0.2);
     z-index: 10;
     margin-right: auto;
@@ -73,7 +75,8 @@ body {
 /* Subtitle */
 .subtitle {
     font-size: 0.95rem;
-    color: #333333;
+    color: #ffffff; /* Made white so it stands out clearly over the transparent background */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8); /* Adds a shadow for maximum readability */
     margin-bottom: 20px;
 }
 
@@ -81,9 +84,10 @@ body {
 .cta-section {
     margin-top: 15px;
     padding: 18px;
-    background-color: #ffffff;
+    /* Also made the inner section translucent */
+    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 8px;
-    border: 1px solid #eaeaea;
+    border: 1px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
@@ -91,7 +95,8 @@ body {
     font-size: 0.85rem;
     font-weight: 600;
     margin-bottom: 10px;
-    color: #000000;
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .btn {
