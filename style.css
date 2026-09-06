@@ -1,3 +1,4 @@
+
 /* Reset & Base Styles */
 * {
     box-sizing: border-box;
@@ -36,14 +37,16 @@ body {
     z-index: 10;
 }
 
-/* Logo (Fixed with explicit max-width and height auto so it stays inside) */
+/* Logo formatted as a clean circular badge */
 .site-logo {
-    width: 100% !important;
-    max-width: 140px !important;
-    height: auto !important;
-    object-fit: contain;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
     display: block;
     margin: 0 auto 15px auto;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Typography */
