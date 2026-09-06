@@ -65,10 +65,11 @@ body {
     z-index: 25;
 }
 
-/* Right-Side Vertical Action Panel */
+/* Right-Side Vertical Action Panel (Centered vertically on the right side) */
 .right-action-panel {
     position: fixed;
-    top: 150px;
+    top: 50%;
+    transform: translateY(-50%);
     right: 30px;
     display: flex;
     flex-direction: column;
