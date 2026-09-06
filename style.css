@@ -28,7 +28,7 @@ body {
 .ocean-hero {
     position: absolute;
     top: 60px;
-    left: 540px; /* Positions it nicely to the right of your white card box */
+    left: 540px;
     text-align: center;
     z-index: 10;
 }
@@ -47,8 +47,8 @@ body {
 .ocean-hero h1 {
     font-size: 2.2rem;
     font-weight: 700;
-    color: #ffffff; /* White text so it pops against the ocean and clouds */
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7); /* Deep shadow for clear readability */
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
     letter-spacing: 0.5px;
 }
 
@@ -62,7 +62,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     z-index: 10;
-    margin-top: 50px; /* Gives a tiny bit of breathing room */
+    margin-top: 50px;
 }
 
 .subtitle {
@@ -127,9 +127,9 @@ body {
 
 .image-grid {
     display: flex;
-    gap: 12px;
+    gap: 15px;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .image-card {
@@ -137,8 +137,7 @@ body {
     border: 1px solid #eaeaea;
     border-radius: 6px;
     overflow: hidden;
-    width: 100%;
-    max-width: 175px;
+    width: 50%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
