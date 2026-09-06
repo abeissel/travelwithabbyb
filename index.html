@@ -14,25 +14,25 @@
 
         body {
             width: 100vw;
-            height: 100vh;
+            min-height: 100vh;
             background-image: url('images/background.jpg');
             background-size: cover;
             background-position: center;
             font-family: Arial, sans-serif;
-            position: relative;
-            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
         }
 
         /* Top Center Section (Logo + Stretched Title) */
         .center-container {
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
             text-align: center;
             width: 100%;
             max-width: 800px;
-            padding: 0 20px;
+            margin-top: 10px;
             z-index: 10;
         }
 
@@ -51,17 +51,24 @@
             text-transform: uppercase;
         }
 
+        /* Middle Section Container (Desktop Side-by-Side) */
+        .middle-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1100px;
+            margin: auto 0;
+            padding: 0 20px;
+            z-index: 10;
+        }
+
         /* Left-Side Content & Message */
         .left-content {
-            position: absolute;
-            top: 50%;
-            left: 30px;
-            transform: translateY(-50%);
             display: flex;
             flex-direction: column;
             gap: 15px;
-            max-width: 270px;
-            z-index: 10;
+            max-width: 300px;
         }
 
         .left-message {
@@ -76,14 +83,10 @@
 
         /* Right-Side Buttons */
         .right-buttons {
-            position: absolute;
-            top: 50%;
-            right: 30px;
-            transform: translateY(-50%);
             display: flex;
             flex-direction: column;
             gap: 15px;
-            z-index: 10;
+            min-width: 200px;
         }
 
         /* General Button Styling */
@@ -105,21 +108,18 @@
 
         /* Bottom Affiliate Picture Boxes - Large */
         .affiliate-footer {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
             display: flex;
-            gap: 30px;
+            gap: 20px;
             justify-content: center;
             width: 100%;
-            padding: 0 20px;
+            max-width: 1100px;
+            margin-bottom: 10px;
             z-index: 10;
         }
 
         .affiliate-box {
-            width: 240px;
-            height: 120px;
+            width: 220px;
+            height: 110px;
             background: rgba(255, 255, 255, 0.9);
             border: 3px solid #007bff;
             border-radius: 10px;
@@ -141,33 +141,23 @@
         }
 
         /* =======================================================
-           MOBILE RESPONSIVE STYLES (Triggers automatically on phones)
+           MOBILE RESPONSIVE STYLES (Screens under 900px)
            ======================================================= */
         @media screen and (max-width: 900px) {
             body {
                 height: auto;
                 min-height: 100vh;
-                overflow-y: auto; /* Allows scrolling on mobile */
-                padding: 20px 15px 40px 15px;
+                justify-content: flex-start;
+                gap: 25px;
+                padding: 20px 15px;
             }
 
-            /* Disable absolute positioning on mobile so elements stack cleanly */
-            .center-container, .left-content, .right-buttons, .affiliate-footer {
-                position: static;
-                transform: none;
-                width: 100%;
-                max-width: 100%;
-                margin-bottom: 20px;
-            }
-
-            /* Order 1: Logo & Title at the very top */
             .center-container {
                 margin-top: 10px;
-                margin-bottom: 25px;
             }
 
             .logo {
-                width: 130px; /* Perfectly sized for phone screens */
+                width: 130px;
             }
 
             .title {
@@ -175,13 +165,22 @@
                 letter-spacing: 1px;
             }
 
-            /* Order 2: Message & Quote Button with a readable semi-transparent background box */
+            /* Stack the middle items vertically on phones */
+            .middle-container {
+                flex-direction: column;
+                gap: 25px;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+            }
+
             .left-content {
-                background: rgba(0, 0, 0, 0.65);
+                max-width: 100%;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.65); /* Clean box background for mobile readability */
                 padding: 20px;
                 border-radius: 10px;
                 text-align: center;
-                margin-bottom: 25px;
             }
 
             .left-message {
@@ -189,12 +188,8 @@
                 margin-bottom: 15px;
             }
 
-            /* Order 3: Action Buttons (Full width for easy tapping) */
             .right-buttons {
-                display: flex;
-                flex-direction: column;
-                gap: 12px;
-                margin-bottom: 25px;
+                width: 100%;
             }
 
             .btn {
@@ -203,15 +198,15 @@
                 font-size: 16px;
             }
 
-            /* Order 4: Affiliate Boxes stacked neatly two-by-two */
+            /* Stack or grid the affiliate boxes nicely on smaller screens */
             .affiliate-footer {
                 flex-wrap: wrap;
                 gap: 12px;
-                justify-content: center;
+                margin-top: 5px;
             }
 
             .affiliate-box {
-                width: 48%; /* Fits two side-by-side cleanly */
+                width: 48%;
                 height: 80px;
             }
         }
@@ -219,25 +214,28 @@
 </head>
 <body>
 
-    <!-- Left-Hand Side Content & Message -->
-    <div class="left-content">
-        <div class="left-message">
-            Ready to set sail? Explore our exclusive cruise packages and special offers. Ask about our all-inclusive resorts.
-        </div>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScmWA3gwEhbjbqobIGya7RzIcihCsi9DrsDyzGvwAm7X4e9Hw/viewform?usp=header" target="_blank" class="btn">Get a Quote</a>
-    </div>
-
     <!-- Top Center Section: Larger Logo & Stretched Title -->
     <div class="center-container">
         <img src="images/logo.jpg" alt="Logo" class="logo">
         <div class="title">Travel with Abby B</div>
     </div>
 
-    <!-- Right-Side Buttons -->
-    <div class="right-buttons">
-        <a href="https://m.me/AbbyLuxevoVacations" target="_blank" class="btn">Message Us</a>
-        <a href="tel:7408194345" class="btn">Call Us</a>
-        <a href="https://www.facebook.com/AbbyLuxevoVacations" target="_blank" class="btn">Find us on Facebook</a>
+    <!-- Middle Section (Message & Contact Buttons) -->
+    <div class="middle-container">
+        <!-- Left-Hand Side Content & Message -->
+        <div class="left-content">
+            <div class="left-message">
+                Ready to set sail? Explore our exclusive cruise packages and special offers. Ask about our all-inclusive resorts.
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScmWA3gwEhbjbqobIGya7RzIcihCsi9DrsDyzGvwAm7X4e9Hw/viewform?usp=header" target="_blank" class="btn">Get a Quote</a>
+        </div>
+
+        <!-- Right-Side Buttons -->
+        <div class="right-buttons">
+            <a href="https://m.me/AbbyLuxevoVacations" target="_blank" class="btn">Message Us</a>
+            <a href="tel:7408194345" class="btn">Call Us</a>
+            <a href="https://www.facebook.com/AbbyLuxevoVacations" target="_blank" class="btn">Find us on Facebook</a>
+        </div>
     </div>
 
     <!-- Bottom Affiliate Picture Boxes -->
