@@ -19,58 +19,60 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 40px;
     min-height: 100vh;
     position: relative;
+    overflow-x: hidden;
 }
 
-/* Centered Logo & Title Floating in the Sky */
+/* Logo and Title: Dead center of the screen in the sky */
 .sky-center-header {
     position: fixed;
-    top: 40px;
-    left: 55%;
+    top: 35px;
+    left: 50%;
     transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 0.95);
-    padding: 20px 30px;
+    padding: 15px 25px;
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
     text-align: center;
     z-index: 25;
     border: 2px solid rgba(255, 255, 255, 0.8);
-    width: 280px;
+    width: 260px;
 }
 
 .sky-logo {
     width: 100%;
-    max-width: 130px;
+    max-width: 120px;
     height: auto;
     display: block;
-    margin: 0 auto 12px auto;
+    margin: 0 auto 10px auto;
     border-radius: 6px;
 }
 
 .sky-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: #000000;
 }
 
-/* Main Content Card Pushed to the Far Left */
+/* White Content Box: Touching the exact left edge of the screen */
 .container {
     width: 100%;
-    max-width: 380px;
+    max-width: 400px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.95);
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 0 12px 12px 0; /* Rounded on the right side, flush on the left */
+    box-shadow: 4px 8px 24px rgba(0, 0, 0, 0.2);
     z-index: 10;
-    margin-right: auto; /* Keeps it locked to the left side */
+    margin-right: auto;
+    position: absolute;
+    left: 0;
 }
 
 /* Subtitle */
 .subtitle {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: #333333;
     margin-bottom: 20px;
 }
@@ -112,7 +114,7 @@ body {
 .supplier-corner-left {
     position: fixed;
     bottom: 30px;
-    left: 40px;
+    left: 30px;
     background: rgba(255, 255, 255, 0.95);
     border: 1px solid #eaeaea;
     border-radius: 8px;
@@ -142,7 +144,7 @@ body {
 .supplier-corner-right {
     position: fixed;
     bottom: 30px;
-    right: 40px;
+    right: 30px;
     background: rgba(255, 255, 255, 0.95);
     border: 1px solid #eaeaea;
     border-radius: 8px;
