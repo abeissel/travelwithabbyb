@@ -42,10 +42,12 @@ body {
 }
 
 .site-logo {
-    max-width: 160px;
+    max-width: 150px;
     height: auto;
     display: block;
-    margin: 0 auto; /* This forces the image to center itself inside the card */
+    margin: 0 auto;
+    position: relative;
+    left: 0px; /* If the anchor still looks nudged, we can tweak this number */
 }
 
 /* Typography */
