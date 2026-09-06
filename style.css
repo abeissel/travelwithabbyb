@@ -6,13 +6,19 @@
 }
 
 body {
-    background-color: #ffffff;
+    /* Change 'background.jpg' below to match your file extension (e.g., .png or .jpeg if needed) */
+    background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
     color: #111111;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
     display: flex;
     justify-content: center;
     padding: 40px 20px;
+    min-height: 100vh;
 }
 
 /* Main Container Layout */
@@ -47,9 +53,10 @@ h1 {
 .cta-section {
     margin: 40px 0;
     padding: 30px;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     border-radius: 8px;
     border: 1px solid #eaeaea;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
 .cta-text {
@@ -102,11 +109,12 @@ h1 {
 }
 
 .image-card {
-    background: #f9f9f9;
+    background: #ffffff;
     border: 1px solid #eaeaea;
     border-radius: 6px;
     overflow: hidden;
     width: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
 .image-card img {
