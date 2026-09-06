@@ -52,16 +52,32 @@
             text-transform: uppercase;
         }
 
-        /* Left-Side Content & Message - Pinned to the Left Edge */
+        /* Top Left Corner Affiliate Box (Box 1) */
+        .top-left-corner {
+            position: absolute;
+            top: 30px;
+            left: 40px;
+            z-index: 10;
+        }
+
+        /* Top Right Corner Affiliate Box (Box 2) */
+        .top-right-corner {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            z-index: 10;
+        }
+
+        /* Middle Left-Side Content & Message */
         .left-content {
             position: absolute;
-            top: 50%;
+            top: 55%;
             left: 40px;
             transform: translateY(-50%);
             display: flex;
             flex-direction: column;
             gap: 15px;
-            max-width: 320px;
+            max-width: 300px;
             z-index: 10;
         }
 
@@ -75,16 +91,16 @@
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
         }
 
-        /* Right-Side Buttons - Pinned to the Right Edge */
+        /* Middle Right-Side Buttons */
         .right-buttons {
             position: absolute;
-            top: 50%;
+            top: 55%;
             right: 40px;
             transform: translateY(-50%);
             display: flex;
             flex-direction: column;
             gap: 15px;
-            width: 220px;
+            width: 200px;
             z-index: 10;
         }
 
@@ -105,24 +121,10 @@
             background-color: #0056b3;
         }
 
-        /* Bottom Affiliate Picture Boxes - Expanded to 6 Total Boxes */
-        .affiliate-footer {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-            width: 100%;
-            max-width: 1300px;
-            z-index: 10;
-            padding: 0 10px;
-        }
-
+        /* Universal 200x200 Affiliate Box Styling */
         .affiliate-box {
-            width: 160px;
-            height: 160px;
+            width: 200px;
+            height: 200px;
             background: rgba(255, 255, 255, 0.9);
             border: 3px solid #007bff;
             border-radius: 10px;
@@ -144,6 +146,21 @@
             object-fit: contain;
         }
 
+        /* Bottom Row Affiliate Footer (4 Boxes Across) */
+        .affiliate-footer {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            width: 100%;
+            max-width: 950px;
+            z-index: 10;
+            padding: 0 10px;
+        }
+
         /* =======================================================
            MOBILE RESPONSIVE STYLES (Screens under 768px)
            ======================================================= */
@@ -159,7 +176,7 @@
                 overflow-y: auto;
             }
 
-            .center-container, .left-content, .right-buttons, .affiliate-footer {
+            .center-container, .top-left-corner, .top-right-corner, .left-content, .right-buttons, .affiliate-footer {
                 position: static;
                 transform: none;
                 width: 100%;
@@ -169,7 +186,7 @@
 
             .center-container {
                 margin-top: 10px;
-                margin-bottom: 25px;
+                margin-bottom: 15px;
             }
 
             .logo {
@@ -179,6 +196,11 @@
             .title {
                 font-size: 22px;
                 letter-spacing: 1px;
+            }
+
+            /* On mobile, stack all 6 affiliate boxes in a neat 2-column or 3-column grid */
+            .top-left-corner, .top-right-corner {
+                display: none; /* We can manage mobile grid flow cleanly below */
             }
 
             .left-content {
@@ -209,19 +231,30 @@
             .affiliate-footer {
                 flex-wrap: wrap;
                 gap: 10px;
+                justify-content: center;
                 margin-top: 5px;
             }
 
             .affiliate-box {
-                width: 31%; /* Fits 3 items per row neatly on mobile screens */
-                height: 110px;
+                width: 48%; /* 2 boxes per row on phones */
+                height: 140px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Left-Hand Side Content & Message (Pinned to Left Edge) -->
+    <!-- Upper Left Corner Affiliate Box (Box 1) -->
+    <a href="YOUR_LINK_1_HERE" target="_blank" class="affiliate-box top-left-corner">
+        <img src="images/affiliate1.jpg" alt="Affiliate 1">
+    </a>
+
+    <!-- Upper Right Corner Affiliate Box (Box 2) -->
+    <a href="YOUR_LINK_2_HERE" target="_blank" class="affiliate-box top-right-corner">
+        <img src="images/affiliate2.jpg" alt="Affiliate 2">
+    </a>
+
+    <!-- Left-Hand Side Content & Message -->
     <div class="left-content">
         <div class="left-message">
             Ready to set sail? Explore our exclusive cruise packages and special offers. Ask about our all-inclusive resorts.
@@ -235,23 +268,31 @@
         <div class="title">Travel with Abby B</div>
     </div>
 
-    <!-- Right-Side Buttons (Pinned to Right Edge) -->
+    <!-- Right-Side Buttons -->
     <div class="right-buttons">
         <a href="https://m.me/AbbyLuxevoVacations" target="_blank" class="btn">Message Us</a>
         <a href="tel:7408194345" class="btn">Call Us</a>
         <a href="https://www.facebook.com/AbbyLuxevoVacations" target="_blank" class="btn">Find us on Facebook</a>
     </div>
 
-    <!-- Bottom Affiliate Picture Boxes (6 Total Boxes) -->
+    <!-- Bottom Row Affiliate Picture Boxes (4 Boxes Across, 200x200) -->
     <div class="affiliate-footer">
-        <div class="affiliate-box">Affiliate 1</div>
+        <!-- Box 3 (Sandals Example) -->
         <a href="https://www.sandals.com/south-coast/photos/?referral=101355&agentid=ANBE8809" target="_blank" class="affiliate-box">
-            <img src="images/CCL_LOGO_CMYK_R_2026_COLOR.jpg" alt="Affiliate 2">
+            <img src="images/CCL_LOGO_CMYK_R_2026_COLOR.jpg" alt="Sandals">
         </a>
-        <div class="affiliate-box">Affiliate 3</div>
-        <div class="affiliate-box">Affiliate 4</div>
-        <div class="affiliate-box">Affiliate 5</div>
-        <div class="affiliate-box">Affiliate 6</div>
+        <!-- Box 4 -->
+        <a href="YOUR_LINK_4_HERE" target="_blank" class="affiliate-box">
+            <img src="images/affiliate4.jpg" alt="Affiliate 4">
+        </a>
+        <!-- Box 5 -->
+        <a href="YOUR_LINK_5_HERE" target="_blank" class="affiliate-box">
+            <img src="images/affiliate5.jpg" alt="Affiliate 5">
+        </a>
+        <!-- Box 6 -->
+        <a href="YOUR_LINK_6_HERE" target="_blank" class="affiliate-box">
+            <img src="images/affiliate6.jpg" alt="Affiliate 6">
+        </a>
     </div>
 
 </body>
