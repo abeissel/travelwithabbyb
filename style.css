@@ -105,46 +105,49 @@ body {
     background-color: #333333;
 }
 
-/* Supplier Showcase Grid */
+/* Supplier Showcase Section (Hidden inside the white box since they are floating outside now) */
+.supplier-showcase h2,
+.supplier-showcase .supplier-desc {
+    display: none; 
+}
+
 .supplier-showcase {
-    margin-top: 30px;
-    border-top: 1px solid #eaeaea;
-    padding-top: 25px;
-    text-align: center;
+    margin-top: 0;
+    border-top: none;
+    padding-top: 0;
 }
 
-.supplier-showcase h2 {
-    font-size: 1.25rem;
-    color: #000000;
-    margin-bottom: 6px;
-}
-
-.supplier-desc {
-    color: #555555;
-    font-size: 0.85rem;
-    margin-bottom: 15px;
-}
-
+/* Floating Supplier Cards in the Bottom Corners of the Screen */
 .image-grid {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    flex-wrap: nowrap;
+    display: contents; /* Allows individual cards to anchor directly to the page body */
 }
 
 .image-card {
-    background: #ffffff;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.95);
     border: 1px solid #eaeaea;
-    border-radius: 6px;
+    border-radius: 8px;
     overflow: hidden;
-    flex: 1;
-    max-width: 180px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    width: 170px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    z-index: 20;
+}
+
+/* Bottom Left Corner Card */
+.image-card:nth-child(1) {
+    bottom: 30px;
+    left: 40px;
+}
+
+/* Bottom Right Corner Card */
+.image-card:nth-child(2) {
+    bottom: 30px;
+    right: 40px;
 }
 
 .image-card img {
     width: 100%;
-    height: 90px;
+    height: 85px;
     object-fit: cover;
     display: block;
 }
