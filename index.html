@@ -105,35 +105,36 @@
             background-color: #0056b3;
         }
 
-        /* Bottom Affiliate Picture Boxes - Updated to 200x200 Square */
+        /* Bottom Affiliate Picture Boxes - Expanded to 6 Total Boxes */
         .affiliate-footer {
             position: absolute;
-            bottom: 25px;
+            bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 20px;
+            gap: 12px;
             justify-content: center;
             width: 100%;
-            max-width: 1000px;
+            max-width: 1300px;
             z-index: 10;
+            padding: 0 10px;
         }
 
         .affiliate-box {
-            width: 200px;
-            height: 200px;
+            width: 160px;
+            height: 160px;
             background: rgba(255, 255, 255, 0.9);
             border: 3px solid #007bff;
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 16px;
+            font-size: 14px;
             color: #333;
             font-weight: bold;
             box-shadow: 0 6px 12px rgba(0,0,0,0.4);
             overflow: hidden;
-            padding: 8px;
+            padding: 6px;
             text-decoration: none;
         }
 
@@ -207,13 +208,13 @@
 
             .affiliate-footer {
                 flex-wrap: wrap;
-                gap: 12px;
+                gap: 10px;
                 margin-top: 5px;
             }
 
             .affiliate-box {
-                width: 48%;
-                height: 150px; /* Scaled nicely for mobile phones */
+                width: 31%; /* Fits 3 items per row neatly on mobile screens */
+                height: 110px;
             }
         }
     </style>
@@ -241,14 +242,16 @@
         <a href="https://www.facebook.com/AbbyLuxevoVacations" target="_blank" class="btn">Find us on Facebook</a>
     </div>
 
-    <!-- Bottom Affiliate Picture Boxes (200x200 Square Format) -->
+    <!-- Bottom Affiliate Picture Boxes (6 Total Boxes) -->
     <div class="affiliate-footer">
+        <div class="affiliate-box">Affiliate 1</div>
         <a href="https://www.sandals.com/south-coast/photos/?referral=101355&agentid=ANBE8809" target="_blank" class="affiliate-box">
-            <img src="images/CCL_LOGO_CMYK_R_2026_COLOR.jpg" alt="Affiliate 1">
+            <img src="images/CCL_LOGO_CMYK_R_2026_COLOR.jpg" alt="Affiliate 2">
         </a>
-        <div class="affiliate-box">Affiliate 2</div>
         <div class="affiliate-box">Affiliate 3</div>
         <div class="affiliate-box">Affiliate 4</div>
+        <div class="affiliate-box">Affiliate 5</div>
+        <div class="affiliate-box">Affiliate 6</div>
     </div>
 
 </body>
