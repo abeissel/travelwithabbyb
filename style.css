@@ -24,36 +24,44 @@ body {
     overflow-x: hidden;
 }
 
-/* Stretched Sky Header (Matches your red line width) */
+/* Top Center Header Box (Holds only the larger logo now) */
 .sky-center-header {
     position: fixed;
-    top: 35px;
+    top: 25px;
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 0.95);
-    padding: 15px 30px;
-    border-radius: 12px;
+    padding: 20px 30px;
+    border-radius: 16px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
     text-align: center;
     z-index: 25;
     border: 2px solid rgba(255, 255, 255, 0.8);
-    width: 440px; /* Stretched wider to reach your red markers */
+    width: 220px;
 }
 
+/* Much Larger Logo */
 .sky-logo {
     width: 100%;
-    max-width: 110px;
+    max-width: 160px;
     height: auto;
     display: block;
-    margin: 0 auto 10px auto;
-    border-radius: 6px;
+    margin: 0 auto;
+    border-radius: 8px;
 }
 
+/* "Travel With Abby B" outside the box, floating directly underneath */
 .sky-title {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #000000;
-    white-space: nowrap; /* Keeps "Travel With Abby B" nicely on one line across the wider box */
+    position: fixed;
+    top: 175px; /* Positioned right below the logo box */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+    white-space: nowrap;
+    z-index: 25;
 }
 
 /* 100% Transparent Left-Side Content Box */
@@ -98,11 +106,11 @@ body {
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.95);
 }
 
-/* Changed Button: White background with black text */
+/* White Button with Black Text */
 .btn {
     display: inline-block;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #ffffff !important;
+    color: #000000 !important;
     padding: 12px 24px;
     font-size: 0.9rem;
     font-weight: 700;
@@ -113,8 +121,8 @@ body {
 }
 
 .btn:hover {
-    background-color: #f0f0f0;
-    color: #000000;
+    background-color: #f0f0f0 !important;
+    color: #000000 !important;
 }
 
 /* Bottom Left Corner Supplier Card */
