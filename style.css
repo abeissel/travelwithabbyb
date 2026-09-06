@@ -36,11 +36,11 @@ body {
     z-index: 10;
 }
 
-/* Logo (Fixed so it stays inside the card cleanly) */
+/* Logo (Fixed with explicit max-width and height auto so it stays inside) */
 .site-logo {
-    width: 100%;
-    max-width: 160px;
-    height: auto;
+    width: 100% !important;
+    max-width: 140px !important;
+    height: auto !important;
     object-fit: contain;
     display: block;
     margin: 0 auto 15px auto;
