@@ -15,35 +15,34 @@
         body {
             width: 100vw;
             height: 100vh;
-            /* Optional: You can use your background.jpg here if you want! */
             background-image: url('images/background.jpg');
             background-size: cover;
             background-position: center;
-            background-color: #f4f4f9; 
             font-family: Arial, sans-serif;
             position: relative;
             overflow: hidden;
         }
 
-        /* Center Section (Logo + Title) */
+        /* Top Center Section (Logo + Title) */
         .center-container {
             position: absolute;
-            top: 50%;
+            top: 20px; /* Positioned near the top */
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translateX(-50%); /* Centers it horizontally */
             text-align: center;
         }
 
         .logo {
-            width: 150px; /* Adjust size as needed */
+            width: 120px; /* Adjust size as needed */
             height: auto;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
         .title {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: bold;
-            color: #333;
+            color: #ffffff; /* White text for contrast */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Shadow makes it readable */
         }
 
         /* Right-Side Buttons */
@@ -57,6 +56,19 @@
             gap: 15px;
         }
 
+        /* Left-Side Content & Button */
+        .left-content {
+            position: absolute;
+            top: 50%;
+            left: 30px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 250px;
+        }
+
+        /* General Button Styling */
         .btn {
             padding: 12px 20px;
             background-color: #007bff;
@@ -65,34 +77,25 @@
             text-align: center;
             border-radius: 5px;
             font-weight: bold;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
             transition: background 0.3s ease;
         }
 
         .btn:hover {
             background-color: #0056b3;
         }
-
-        /* Left-Side Content */
-        .left-content {
-            position: absolute;
-            top: 50%;
-            left: 30px;
-            transform: translateY(-50%);
-            max-width: 250px;
-        }
     </style>
 </head>
 <body>
 
-    <!-- Left-Hand Side Content -->
+    <!-- Left-Hand Side Content & Button -->
     <div class="left-content">
-        <p>This is your left-hand side content. You can put text, links, or a menu here.</p>
+        <a href="#" class="btn">Menu / Links</a>
+        <!-- You can add extra text here if needed -->
     </div>
 
-    <!-- Center Section: Logo & Title -->
+    <!-- Top Center Section: Logo & Title -->
     <div class="center-container">
-        <!-- Updated to point to 'images/logo.jpg' -->
         <img src="images/logo.jpg" alt="Logo" class="logo">
         <div class="title">Travel with Abby B</div>
     </div>
