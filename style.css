@@ -55,59 +55,56 @@ body {
     color: #000000;
 }
 
-/* Transparent Content Box: Touching the exact left edge of the screen */
+/* Completely Clear Left-Side Content Box */
 .container {
     width: 100%;
-    max-width: 400px;
+    max-width: 420px;
     text-align: center;
-    /* Changed from solid white to transparent (rgba with 0.3 opacity). Change 0.3 to make it more or less see-through! */
-    background-color: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(6px); /* Optional: Adds a cool frosted-glass blur effect behind it */
+    background: transparent; /* Completely clear/transparent background */
+    box-shadow: none; /* Removed shadow so it looks fully open */
     padding: 30px;
-    border-radius: 0 12px 12px 0;
-    box-shadow: 4px 8px 24px rgba(0, 0, 0, 0.2);
     z-index: 10;
     margin-right: auto;
     position: absolute;
     left: 0;
 }
 
-/* Subtitle */
+/* Subtitle with a soft shadow to pop against the background photo */
 .subtitle {
-    font-size: 0.95rem;
-    color: #ffffff; /* Made white so it stands out clearly over the transparent background */
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8); /* Adds a shadow for maximum readability */
+    font-size: 1rem;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
     margin-bottom: 20px;
+    font-weight: 500;
 }
 
-/* CTA Section */
+/* CTA Section - Also clear, with subtle text shadows */
 .cta-section {
     margin-top: 15px;
     padding: 18px;
-    /* Also made the inner section translucent */
-    background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    background: transparent;
+    border: none;
+    box-shadow: none;
 }
 
 .cta-text {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     color: #ffffff;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 .btn {
     display: inline-block;
     background-color: #000000;
     color: #ffffff;
-    padding: 10px 20px;
-    font-size: 0.85rem;
+    padding: 12px 24px;
+    font-size: 0.9rem;
     font-weight: 600;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     transition: background-color 0.2s ease;
 }
 
