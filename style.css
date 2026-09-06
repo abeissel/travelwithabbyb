@@ -24,20 +24,20 @@ body {
     position: relative;
 }
 
-/* Floating Banner in the Sky (Logo + Title) */
-.floating-sky-header {
+/* Centered Logo & Title Floating in the Sky */
+.sky-center-header {
     position: fixed;
-    top: 30px;
+    top: 40px;
     left: 55%;
     transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 0.95);
-    padding: 15px 25px;
+    padding: 20px 30px;
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
     text-align: center;
     z-index: 25;
     border: 2px solid rgba(255, 255, 255, 0.8);
-    width: 260px;
+    width: 280px;
 }
 
 .sky-logo {
@@ -45,31 +45,32 @@ body {
     max-width: 130px;
     height: auto;
     display: block;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 12px auto;
     border-radius: 6px;
 }
 
 .sky-title {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #000000;
 }
 
-/* Left-Side Content Card */
+/* Main Content Card Pushed to the Far Left */
 .container {
     width: 100%;
-    max-width: 450px;
+    max-width: 380px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.95);
-    padding: 30px;
+    padding: 25px;
     border-radius: 10px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     z-index: 10;
+    margin-right: auto; /* Keeps it locked to the left side */
 }
 
 /* Subtitle */
 .subtitle {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: #333333;
     margin-bottom: 20px;
 }
