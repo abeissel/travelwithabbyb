@@ -105,7 +105,7 @@
             background-color: #0056b3;
         }
 
-        /* Bottom Affiliate Picture Boxes */
+        /* Bottom Affiliate Picture Boxes - Updated to 200x200 Square */
         .affiliate-footer {
             position: absolute;
             bottom: 25px;
@@ -120,8 +120,8 @@
         }
 
         .affiliate-box {
-            width: 220px;
-            height: 110px;
+            width: 200px;
+            height: 200px;
             background: rgba(255, 255, 255, 0.9);
             border: 3px solid #007bff;
             border-radius: 10px;
@@ -134,6 +134,7 @@
             box-shadow: 0 6px 12px rgba(0,0,0,0.4);
             overflow: hidden;
             padding: 8px;
+            text-decoration: none;
         }
 
         .affiliate-box img {
@@ -157,7 +158,6 @@
                 overflow-y: auto;
             }
 
-            /* Turn off absolute positioning on mobile so everything stacks nicely */
             .center-container, .left-content, .right-buttons, .affiliate-footer {
                 position: static;
                 transform: none;
@@ -213,7 +213,7 @@
 
             .affiliate-box {
                 width: 48%;
-                height: 85px;
+                height: 150px; /* Scaled nicely for mobile phones */
             }
         }
     </style>
@@ -241,11 +241,11 @@
         <a href="https://www.facebook.com/AbbyLuxevoVacations" target="_blank" class="btn">Find us on Facebook</a>
     </div>
 
-    <!-- Bottom Affiliate Picture Boxes -->
+    <!-- Bottom Affiliate Picture Boxes (200x200 Square Format) -->
     <div class="affiliate-footer">
-        <div class="affiliate-box">
+        <a href="https://www.sandals.com/south-coast/photos/?referral=101355&agentid=ANBE8809" target="_blank" class="affiliate-box">
             <img src="images/CCL_LOGO_CMYK_R_2026_COLOR.jpg" alt="Affiliate 1">
-        </div>
+        </a>
         <div class="affiliate-box">Affiliate 2</div>
         <div class="affiliate-box">Affiliate 3</div>
         <div class="affiliate-box">Affiliate 4</div>
