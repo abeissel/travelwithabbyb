@@ -21,47 +21,49 @@ body {
     align-items: center;
     padding: 40px;
     min-height: 100vh;
+    position: relative;
 }
 
-/* Main Container Layout (Forces everything inside to center) */
+/* Floating Logo & Title positioned over the ship area */
+.hero-header {
+    position: absolute;
+    top: 50px;
+    left: 550px; /* Positions it to the right of your left-side white box */
+    text-align: center;
+    z-index: 10;
+}
+
+.floating-logo {
+    max-width: 140px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
+    border-radius: 50%; /* Optional: rounds it nicely if desired */
+}
+
+.hero-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff; /* White text so it stands out over the ocean background */
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6); /* Drop shadow for readability */
+}
+
+/* Left-side White Content Card */
 .container {
     width: 100%;
     max-width: 450px;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.92);
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.95);
     padding: 35px;
     border-radius: 10px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-}
-
-/* Logo Styling */
-.logo-area {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.site-logo {
-    max-width: 150px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Typography (Explicitly Centered) */
-h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #000000;
-    margin-bottom: 12px;
-    text-align: center;
+    z-index: 10;
 }
 
 .subtitle {
     font-size: 1rem;
     color: #333333;
     margin-bottom: 25px;
-    text-align: center;
 }
 
 /* CTA Section */
@@ -98,7 +100,7 @@ h1 {
     background-color: #333333;
 }
 
-/* Supplier Showcase Grid (Explicitly Centered) */
+/* Supplier Showcase Grid */
 .supplier-showcase {
     margin-top: 30px;
     border-top: 1px solid #eaeaea;
@@ -110,14 +112,12 @@ h1 {
     font-size: 1.35rem;
     color: #000000;
     margin-bottom: 8px;
-    text-align: center;
 }
 
 .supplier-desc {
     color: #555555;
     font-size: 0.9rem;
     margin-bottom: 15px;
-    text-align: center;
 }
 
 .image-grid {
@@ -135,7 +135,6 @@ h1 {
     width: 100%;
     max-width: 175px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-    text-align: center;
 }
 
 .image-card img {
@@ -150,5 +149,4 @@ h1 {
     font-size: 0.85rem;
     font-weight: 600;
     color: #111111;
-    text-align: center;
 }
