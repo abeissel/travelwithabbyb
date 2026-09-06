@@ -24,7 +24,7 @@ body {
     position: relative;
 }
 
-/* Floating Header in the Sky (Logo + Title) */
+/* Floating Banner in the Sky (Logo + Title) */
 .floating-sky-header {
     position: fixed;
     top: 30px;
@@ -37,10 +37,12 @@ body {
     text-align: center;
     z-index: 25;
     border: 2px solid rgba(255, 255, 255, 0.8);
+    width: 260px;
 }
 
 .sky-logo {
-    width: 100px;
+    width: 100%;
+    max-width: 130px;
     height: auto;
     display: block;
     margin: 0 auto 10px auto;
@@ -48,7 +50,7 @@ body {
 }
 
 .sky-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: #000000;
 }
@@ -65,7 +67,7 @@ body {
     z-index: 10;
 }
 
-/* Typography */
+/* Subtitle */
 .subtitle {
     font-size: 0.95rem;
     color: #333333;
