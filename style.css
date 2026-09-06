@@ -23,7 +23,7 @@ body {
     min-height: 100vh;
 }
 
-/* Main Container Layout (Left-aligned card with fully centered inner elements) */
+/* Main Container Layout */
 .container {
     width: 100%;
     max-width: 450px;
@@ -34,7 +34,7 @@ body {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
-/* Logo Styling (Properly centered) */
+/* Logo Styling (Forced center alignment) */
 .logo-area {
     width: 100%;
     text-align: center;
@@ -44,10 +44,11 @@ body {
 .site-logo {
     max-width: 160px;
     height: auto;
-    display: inline-block;
+    display: block;
+    margin: 0 auto; /* This forces the image to center itself inside the card */
 }
 
-/* Typography (Centered below logo) */
+/* Typography */
 h1 {
     font-size: 2rem;
     font-weight: 700;
