@@ -55,23 +55,24 @@
             text-transform: uppercase;
         }
 
-        /* Middle Section Container (Desktop Side-by-Side) */
+        /* Middle Section Container - Stretched wider to push edges out */
         .middle-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 100%;
-            max-width: 1050px; /* Slightly widened container to push right side further out */
+            max-width: 1250px;
             margin: 20px 0;
-            padding: 0 15px;
+            padding: 0 10px;
         }
 
-        /* Left-Side Content & Message */
+        /* Left-Side Content & Message - Pushed further left */
         .left-content {
             display: flex;
             flex-direction: column;
             gap: 15px;
             max-width: 320px;
+            margin-left: -20px;
         }
 
         .left-message {
@@ -84,13 +85,13 @@
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
         }
 
-        /* Right-Side Buttons - Nudged further right */
+        /* Right-Side Buttons - Pushed further to the right edge */
         .right-buttons {
             display: flex;
             flex-direction: column;
             gap: 15px;
             width: 220px;
-            margin-right: -10px; /* Shifts the button group further toward the right edge */
+            margin-right: -20px;
         }
 
         /* General Button Styling */
@@ -181,6 +182,7 @@
                 padding: 20px;
                 border-radius: 10px;
                 text-align: center;
+                margin-left: 0;
             }
 
             .left-message {
@@ -191,7 +193,7 @@
 
             .right-buttons {
                 width: 100%;
-                margin-right: 0; /* Resets the right shift for mobile centering */
+                margin-right: 0;
             }
 
             .btn {
